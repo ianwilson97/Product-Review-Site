@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Launch Chrome against localhost:8000",
+        "url": "http://localhost:8000",
+        "webRoot": "${workspaceFolder}/feedback_app/client/src",  // Update this based on your project structure
+        "skipFiles": ["<node_internals>/**"]
+      },
+      {
+        "type": "python",
+        "request": "launch",
+        "name": "Python: FastAPI",
+        "program": "${workspaceFolder}/feedback_app/api/main.py",
+        "args": ["--host", "0.0.0.0", "--port", "3000"],
+        "env": {"UVICORN_ENV": "development"},
+        "console": "integratedTerminal"
+      }
+    ]
+  }
+  
